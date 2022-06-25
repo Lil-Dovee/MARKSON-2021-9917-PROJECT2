@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+        <form action="POST">
+            <h1> CURRENCY CONVERTER </h1>
+            <div class="form-tin">
+                <div class="form-box">
+                    <label for="naira"  ><i class="fa-solid fa-naira-sign"></i></label>
+                    <input type="number" id="naira" placeholder="Enter Number">
+                </div>
+                <div class="form-box">
+                    <label for="dollar" ><i class="fa-solid fa-dollar-sign"></i></label>
+                    <input type="number" id="dollar" placeholder="Enter Number">
+                </div>
+                <button type="submit" id="btn">CONVERT</button>
+        </div>
+        </form>
+        <script>
+            const naira = document.getElementById('naira');
+            const dollar = document.getElementById('dollar')
+            const btn = document.querySelector('#btn');
+            btn.addEventListener('click', calculate);
+            function calculate(e){
+                dollar.value = parseFloat(naira.value) / 644;
+                e.preventDefault();
+            }
+        </script>
+</body>
+</html>
